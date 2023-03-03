@@ -27,7 +27,17 @@
         <input class="search_bar" type="text" onchange="hideIcon(this);"
         placeholder="search for ideas"> 
     </div>
-
+@foreach ($ideas
+ as $idea)
+ <div class="idea_class">
+    <a href='idea/{{$idea['id']}}'><h3>{{$idea['title']}}</h3></a>
+    <p>{{$idea['description']}}</p>
+    {{-- <?php foreach($idea['tags'] as $tag){?>
+        <button><?php echo $tag; ?></button>
+    <?php } ?> --}}
+    
+ </div>
+ @endforeach
 </body>
 
 </html>

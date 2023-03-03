@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Idea;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +20,14 @@ Route::get('/', function () {
 });
 
 Route::get('/user', function(){
-    return view('user');
+    return view('user',[
+        'ideas' => Idea::all()
+    ]);
+});
+
+
+Route::get('/idea/{id}',function($id){
+    return view('idea',[
+        'idea' => Idea::find($id)
+    ]);
 });
