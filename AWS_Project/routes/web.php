@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Idea;
+use App\Models\User;
 
 
 /*
@@ -19,15 +20,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user', function(){
+Route::get('/user/{id}', function($id){
     return view('user',[
-        'ideas' => Idea::all()
+        'ideas' => Idea::all(),
+        'id' => $id
+    ]);
+})-> where('id', '[0-9]*');
+
+
+Route::get('user/idea/{id}',function($id){
+    return view('idea',[
+        'idea' => Idea::find($id)
     ]);
 });
 
-
-Route::get('/idea/{id}',function($id){
-    return view('idea',[
-        'idea' => Idea::find($id)
+Route::get('user_profile/{id}',function($id){
+    return view('user_profile',[
+        'user' => User::find($id)
     ]);
 });

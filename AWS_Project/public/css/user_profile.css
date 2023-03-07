@@ -1,0 +1,45 @@
+.user_profile_header{
+    padding-left: 60%;
+}
+
+body{
+    background-color: aqua;
+}
+
+.company_logo{
+    background-color:transparent;
+    border:none;
+    width:150px;
+    height:100px;
+    margin-top:10%;
+    margin-left:20%;
+    margin-right:10%;
+}
+
+
+.cart_logo{
+    border-radius:50%;
+    width:75px;
+    height:75px;
+    margin-right: 20%;
+    border: none;
+    cursor: pointer;
+}
+
+button{
+    border:none;
+    background-color: transparent;
+}
+
+
+.user_profile_form{
+    margin-left:40%;
+    margin-top:10%;
+}
+
+input{
+    padding:10px;
+    width:40%;
+    outline: none;
+    margin-bottom: 20px;
+}
