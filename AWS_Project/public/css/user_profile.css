@@ -18,9 +18,8 @@ body{
 
 
 .cart_logo{
-    border-radius:50%;
-    width:75px;
-    height:75px;
+    width:55px;
+    height:55px;
     margin-right: 20%;
     border: none;
     cursor: pointer;
@@ -33,7 +32,6 @@ button{
 
 
 .user_profile_form{
-    margin-left:40%;
     margin-top:10%;
 }
 
@@ -42,4 +40,35 @@ input{
     width:40%;
     outline: none;
     margin-bottom: 20px;
+}
+
+.user_profile_icon{
+    border-radius: 16px;
+    width: 25%;
+    height:25%;
+    margin-left:10%;
+}
+
+.user_signout_button{
+    width:25%;
+    border-radius: 16px;
+    margin-left: 10%;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+
+.user_profile_table_header{
+    width:37%;
+    vertical-align: middle;
+}
+
+.update_button{
+    border-radius: 16px;
+    margin-left: 14%;
+    width:15%;
 }
