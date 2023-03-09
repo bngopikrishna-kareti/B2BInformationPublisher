@@ -71,4 +71,5 @@ table{
     border-radius: 16px;
     margin-left: 14%;
     width:15%;
+    cursor: pointer;
 }
