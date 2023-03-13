@@ -4,15 +4,28 @@
     <link href= "{{ asset('/css/user.css') }}" rel="stylesheet">
 
         <script>
-            function hideIcon(self){
-                self.style.backgroundImage = 'none';
+            function filterIdeas(id){
+                var input = document.getElementById("inputIdea");
+                input.addEventListener("keypress", function(event){
+                if (event.keyCode == 13){
+                    window.location = id+"?filter="+input.value;
+                }
+            });
             }
 
             function user_profile(id){
                 window.location = "/user_profile/"+id
 
             }
-            </script>
+
+            function all_ideas(id){
+                window.location = id
+            }
+            
+        </script>
+        <noscript>
+        <h1>JavaScript is disabled</h1>
+        </noscript>
 </head>
 <body>
     <div class="user_header">
@@ -20,6 +33,8 @@
         <button >
             <img class="profile_image" src={{asset('images/profile_icon.jpg')}} alt='profile image'
             onclick="user_profile({{$id}})" > 
+            <br>
+            {{$user["first_name"]}}
         </button>
 
         <button >
@@ -30,9 +45,21 @@
     </div>
 
     <div class="search_div">
-        <input class="search_bar" type="text" onchange="hideIcon(this);"
+        <input 
+        class="search_bar" 
+        id="inputIdea"
+        type="text" 
+        onchange="filterIdeas({{$id}})"
         placeholder="search for ideas"> 
     </div>
+
+    <table class="ideas_menu">
+        <tr>
+            <button onclick="all_ideas({{$id}})">
+                All Ideas
+            </button>
+        </tr>
+    </table>
 
 @foreach ($ideas
  as $idea)

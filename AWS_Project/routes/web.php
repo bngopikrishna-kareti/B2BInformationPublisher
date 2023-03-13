@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Idea;
 use App\Models\User;
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +27,8 @@ Route::get('/', function () {
 Route::get('/user/{id}', function($id){
     return view('user',[
         'ideas' => Idea::all(),
-        'id' => $id
+        'id' => $id,
+        'user' => User::find($id)
     ]);
 })-> where('id', '[0-9]*');
 
@@ -36,6 +41,12 @@ Route::get('user/idea/{id}',function($id){
 
 Route::get('user_profile/{id}',function($id){
     return view('user_profile',[
-        'user' => User::find($id)
+        'user' => User::find($id),
+        'id' => $id
     ]);
-});
+})-> where('id', '[0-9]*');
+
+
+Route::get('/user/{id}',[IdeaController::class,'filter']);
+
+Route::get('/user_profile/{id}/update',[UserController::class,'update']);

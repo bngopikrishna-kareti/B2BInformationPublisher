@@ -67,3 +67,9 @@ button{
     padding: 10;
     cursor: pointer;
 }
+
+.ideas_menu{
+    background-color: white;
+    width:20%;
+    height:30%;
+}
