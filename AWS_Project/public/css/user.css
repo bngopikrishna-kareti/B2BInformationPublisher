@@ -68,8 +68,22 @@ button{
     cursor: pointer;
 }
 
-.ideas_menu{
-    background-color: white;
-    width:20%;
-    height:30%;
+.all_ideas_menu{
+    font-size:20px;
+    padding-left:3%;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.w-5{
+    display: none;
+    color: aliceblue;
+}
+
+.pagination_links{
+    color:aliceblue;
+    font-size:20px;
+    float:right;
+    padding-right:10;
+    font-weight:bold;
 }

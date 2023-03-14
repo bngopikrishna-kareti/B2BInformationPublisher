@@ -54,22 +54,30 @@
     </div>
 
     <table class="ideas_menu">
-        <tr>
-            <button onclick="all_ideas({{$id}})">
+       <tbody>
+            <tr>
+                <button class="all_ideas_menu" onclick="all_ideas({{$id}})">
                 All Ideas
-            </button>
-        </tr>
+                </button>
+            </tr>
+       </tbody>
     </table>
 
-@foreach ($ideas
- as $idea)
- <div class="idea_class">
-    <a href='idea/{{$idea['id']}}'><h3>{{$idea['title']}}</h3></a>
-    <p>{{$idea['description']}}</p>
-    @foreach(explode(',',$idea['tags']) as $tag)
-        <input type="submit" value="{{$tag}}" class="tags_button" />
+    @foreach ($ideas as $idea)
+        <?php 
+            $idea = (array) $idea;
+        ?>
+        <div class="idea_class">
+            <a href='idea/{{$idea['id']}}'><h3>{{$idea['title']}}</h3></a>
+            <p>{{$idea['description']}}</p>
+            @foreach(explode(',',$idea['tags']) as $tag)
+                <input type="submit" value="{{$tag}}" class="tags_button" />
+            @endforeach
+        </div>
     @endforeach
- </div>
- @endforeach
 </body>
+
+<span class="pagination_links">
+    {{!! $ideas->links() !!}}
+</span>
 </html>
