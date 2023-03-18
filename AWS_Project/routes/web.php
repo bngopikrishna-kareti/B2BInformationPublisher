@@ -33,9 +33,10 @@ Route::get('/user/{id}', function($id){
 })-> where('id', '[0-9]*');
 
 
-Route::get('user/idea/{id}',function($id){
+Route::get('user/{userId}/idea/{id}',function($userId,$id){
     return view('idea',[
-        'idea' => Idea::find($id)
+        'idea' => Idea::find($id),
+        'userId'=> $userId
     ]);
 });
 

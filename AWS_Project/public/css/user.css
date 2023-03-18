@@ -68,11 +68,12 @@ button{
     cursor: pointer;
 }
 
-.all_ideas_menu{
+.all_ideas_menu,.interested_ideas_menu{
     font-size:20px;
     padding-left:3%;
     color: blueviolet;
     cursor: pointer;
+    padding-bottom: 10;
 }
 
 .w-5{

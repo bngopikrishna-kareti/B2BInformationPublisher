@@ -13,6 +13,10 @@
             });
             }
 
+            function interested_ideas(id){
+                window.location = id+"?interested_ideas=true";
+            }
+
             function user_profile(id){
                 window.location = "/user_profile/"+id
 
@@ -59,6 +63,11 @@
                 <button class="all_ideas_menu" onclick="all_ideas({{$id}})">
                 All Ideas
                 </button>
+            </tr><br>
+            <tr>
+                <button class="interested_ideas_menu" onclick="interested_ideas({{$id}})">
+                    Interested Ideas
+                </button>
             </tr>
        </tbody>
     </table>
@@ -68,7 +77,7 @@
             $idea = (array) $idea;
         ?>
         <div class="idea_class">
-            <a href='idea/{{$idea['id']}}'><h3>{{$idea['title']}}</h3></a>
+            <a href='{{$id}}/idea/{{$idea['id']}}'><h3>{{$idea['title']}}</h3></a>
             <p>{{$idea['description']}}</p>
             @foreach(explode(',',$idea['tags']) as $tag)
                 <input type="submit" value="{{$tag}}" class="tags_button" />
