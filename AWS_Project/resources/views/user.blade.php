@@ -2,34 +2,10 @@
 <head>
     <title>Idea Invest</title>
     <link href= "{{ asset('/css/user.css') }}" rel="stylesheet">
-
-        <script>
-            function filterIdeas(id){
-                var input = document.getElementById("inputIdea");
-                input.addEventListener("keypress", function(event){
-                if (event.keyCode == 13){
-                    window.location = id+"?filter="+input.value;
-                }
-            });
-            }
-
-            function interested_ideas(id){
-                window.location = id+"?interested_ideas=true";
-            }
-
-            function user_profile(id){
-                window.location = "/user_profile/"+id
-
-            }
-
-            function all_ideas(id){
-                window.location = id
-            }
-            
-        </script>
-        <noscript>
+    <script type="text/javascript" src="{{asset('/js/user.js')}}"></script>
+    <noscript>
         <h1>JavaScript is disabled</h1>
-        </noscript>
+    </noscript>
 </head>
 <body>
     <div class="user_header">

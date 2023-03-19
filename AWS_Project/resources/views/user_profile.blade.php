@@ -4,32 +4,15 @@ $tags = ['tech', 'oil', 'textile','automobile','construction','cosmetics','miner
 ?>
 <head>
     <link href='{{asset('/css/user_profile.css')}}' rel='stylesheet'>
-    <script>
-        function update(id){
-            var user_details = new Object();
-            var options = document.getElementById('tags').selectedOptions;
-            var tags = Array.from(options).map(({ value }) => value);
-            user_details.tags = tags.length >=1 ? tags : document.getElementById("interested_tags").value;
-            user_details.first_name = document.getElementById("first_name").value;
-            user_details.last_name = document.getElementById("last_name").value;
-            user_details.email_address = document.getElementById("email_address").value;
-            console.log(user_details);
-            var user_update_url = id+"/update?";
-            for(var key in user_details)
-            {
-                user_update_url += key+'='+user_details[key]+'&';
-            }
-            user_update_url = user_update_url.slice(0,user_update_url.length-1);
-            window.location = user_update_url;
-            // window.location = '';
-        }
-    </script>
+    <script type="text/javascript" src="{{asset('/js/user_profile.js')}}"></script>
 </head>
 <body>
    <div class="user_profile_header">
-
+        <button class="dashboard" onclick=user_dashboard({{$id}})>
+            dashboard
+        </button>
         <button>
-            <img src={{asset('images/cart_logo.png')}} alt="cart_logo" class="cart_logo">
+            <img src={{asset('images/cart_logo.png')}} alt="cart_logo" class="cart_logo" onclick="wishlist_page({{$id}})">
         </button>
         <img class = "company_logo" src={{asset('images/company_logo.jpeg')}} alt = 'company logo'>
    </div>

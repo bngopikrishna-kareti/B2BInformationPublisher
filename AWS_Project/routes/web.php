@@ -37,7 +37,8 @@ Route::get('/user/{id}', function($id){
 Route::get('user/{userId}/idea/{id}',function($userId,$id){
     return view('idea',[
         'idea' => Idea::find($id),
-        'userId'=> $userId
+        'userId'=> $userId,
+        'id' => $id
     ]);
 });
 
@@ -55,3 +56,5 @@ Route::get('user_profile/{id}',function($id){
 Route::get('/user/{id}',[IdeaController::class,'filter']);
 
 Route::get('/user_profile/{id}/update',[UserController::class,'update']);
+
+Route::get('/user/{id}/wishlist',[UserCartController::class,'user_wishlist']);
