@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserCartController;
 
 
 /*
@@ -39,6 +40,9 @@ Route::get('user/{userId}/idea/{id}',function($userId,$id){
         'userId'=> $userId
     ]);
 });
+
+Route::get('user/{userId}/idea/{id}/add_to_cart',[UserCartController::class,'add_to_cart']);
+
 
 Route::get('user_profile/{id}',function($id){
     return view('user_profile',[

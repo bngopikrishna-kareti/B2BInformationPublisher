@@ -21,6 +21,7 @@ $tags = ['tech', 'oil', 'textile','automobile','construction','cosmetics','miner
             }
             user_update_url = user_update_url.slice(0,user_update_url.length-1);
             window.location = user_update_url;
+            // window.location = '';
         }
     </script>
 </head>
