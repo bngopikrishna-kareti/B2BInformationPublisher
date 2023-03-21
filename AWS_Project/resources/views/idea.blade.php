@@ -7,6 +7,9 @@
         </script>
     </head>
     <body>
+        <button class="dashboard" onclick=user_dashboard({{$userId}})>
+            dashboard
+        </button>
         <h1>{{$idea['title']}}</h1>
         <button class="add_to_cart" onclick="add_to_cart({{$id}})">
             Add to cart

@@ -33,7 +33,14 @@ class UserCartController extends Controller
             ]);
     }
 
-    public function user_wishlist($id){
+    public function user_wishlist(Request $request, $id){
+
+        if($request->remove){
+            DB::table("users_cart")
+                    ->where(['userId' => $id,
+                             'ideaId' => $request->ideaId])->delete();
+        }
+
 
         $user_wishlist = DB::table("users_cart")
                                 ->where('userId','=',$id)
@@ -49,6 +56,7 @@ class UserCartController extends Controller
                         ->get()->toArray();
         return view('user_cart',[
             'ideas' => $ideas,
+            'userId' => $id
         ]);
 
     }
