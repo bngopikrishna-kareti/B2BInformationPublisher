@@ -1,0 +1,83 @@
+.user_profile_header{
+    padding-left: 60%;
+}
+
+body{
+    background-color: aqua;
+}
+
+.company_logo{
+    background-color:transparent;
+    border:none;
+    width:150px;
+    height:100px;
+    margin-top:10%;
+    margin-left:20%;
+    margin-right:10%;
+}
+
+
+.cart_logo{
+    width:55px;
+    height:55px;
+    margin-right: 20%;
+    border: none;
+    cursor: pointer;
+}
+
+button{
+    border:none;
+    background-color: transparent;
+}
+
+
+.user_profile_form{
+    margin-top:10%;
+}
+
+input{
+    padding:10px;
+    width:40%;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.user_profile_icon{
+    border-radius: 16px;
+    width: 25%;
+    height:25%;
+    margin-left:10%;
+}
+
+.user_signout_button{
+    width:25%;
+    border-radius: 16px;
+    margin-left: 10%;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+
+.user_profile_table_header{
+    width:37%;
+    vertical-align: middle;
+}
+
+.update_button{
+    border-radius: 16px;
+    margin-left: 14%;
+    width:15%;
+    cursor: pointer;
+}
+
+.dashboard{
+    font-size:20px;
+    padding-left:3%;
+    color: blueviolet;
+    cursor: pointer;
+    padding-bottom: 10;
+}

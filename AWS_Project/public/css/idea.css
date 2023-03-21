@@ -1,0 +1,43 @@
+body{
+    width:50%;
+    height:50%;
+    margin-left: 30%;
+    margin-top:20%;
+    background-color: aqua;
+}
+
+
+.idea_description{
+    width:50%;
+}
+
+.tags_button{
+    border-radius: 16px;
+    background-color: black;
+    color: white;
+    padding: 10;
+    cursor: pointer;
+}
+
+
+.add_to_cart{
+    float: right;
+    border-radius: 16px;
+    background-color: black;
+    color: white;
+    padding: 10;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.dashboard{
+    font-size:20px;
+    padding-left:3%;
+    color: blueviolet;
+    cursor: pointer;
+    padding-bottom: 10;
+    background-color: transparent;
+    border:none;
+    float:right;
+}
