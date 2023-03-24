@@ -17,10 +17,20 @@
             {{$user["first_name"]}}
         </button>
 
-        <button >
-            <img  class="notification_icon" src = {{asset('images/notification_icon.jpg')}} alt='notification icon'>
+        <button>
+            <img  class="notification_icon" src = {{asset('images/notification_icon.jpg')}} alt='notification icon' 
+            onclick="notifications({{$id}})" >
         </button>
-
+    <div class="notification_div" style="width:{{$notifications}}?0:100px;height:{{$notifications}}?0:200px; padding:{{$notifications}}?10;">
+            @if ($notifications == true)
+                @foreach($notifications_list as $notification)
+                    <?
+                        $notification = (array) $notification;
+                    ?>
+                    <h5>{{$notification->message}}</h5>
+                @endforeach
+            @endif
+        </div>
         <img class = "company_logo" src={{asset('images/company_logo.jpeg')}} alt = 'company logo'>
     </div>
 
@@ -63,6 +73,6 @@
 </body>
 
 <span class="pagination_links">
-    {{!! $ideas->links() !!}}
+    {!! $ideas->links() !!}
 </span>
 </html>

@@ -88,3 +88,8 @@ button{
     padding-right:10;
     font-weight:bold;
 }
+
+.notification_div{
+    position:absolute;
+    background:white;
+}

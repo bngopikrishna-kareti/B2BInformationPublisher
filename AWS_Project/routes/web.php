@@ -25,11 +25,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/{id}', function($id){
+Route::get('/user/{id}', function(Request $request, $id){
     return view('user',[
         'ideas' => Idea::all(),
         'id' => $id,
-        'user' => User::find($id)
+        'user' => User::find($id),
+        'notifications' => $request->notifications ? true : false
     ]);
 })-> where('id', '[0-9]*');
 

@@ -19,3 +19,8 @@ function user_profile(id){
 function all_ideas(id){
     window.location = id
 }
+
+function notifications(id){
+    current_url = window.location.href;
+    window.location = current_url.includes("notifications")?id:id+"?notifications=true"
+}

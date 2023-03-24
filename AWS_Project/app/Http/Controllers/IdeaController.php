@@ -12,7 +12,7 @@ class IdeaController extends Controller
 {
     public function filter(Request $request, $id)
     {
-       
+        $notifications_list = $this->get_notifications($id);
         $filtered_ideas = $this->get_filtered_ideas($request,$id);
         $filtered_ideas = $this->paginate($filtered_ideas, 10);
         $filtered_path = $this->get_filter_path($request,$id);
@@ -22,7 +22,9 @@ class IdeaController extends Controller
         return view('user',[
             'id' => $id,
             'user' => User::find($id),
-            'ideas' => $filtered_ideas
+            'ideas' => $filtered_ideas,
+            'notifications' => $request->notifications?true:false,
+            'notifications_list' => $notifications_list
        ]);
         // return Response($filtered_ideas);
     }
@@ -89,4 +91,18 @@ class IdeaController extends Controller
         return $filtered_path;
     }
 
+    public function get_notifications($id){
+        $notifications_list = DB::table('notifications')
+                                    ->where([
+                                        ['user_id','=', $id],
+                                        ['validtill','>',now()],
+                                    ])
+                                    ->get()->toArray();
+
+        return $notifications_list;
+    }
+
 }
+
+
+
