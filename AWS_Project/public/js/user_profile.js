@@ -24,3 +24,7 @@ function user_dashboard(id){
 function wishlist_page(id){
     window.location = "/user/"+id+"/wishlist";
 }
+
+function sign_out(){
+    window.location = '/';
+}

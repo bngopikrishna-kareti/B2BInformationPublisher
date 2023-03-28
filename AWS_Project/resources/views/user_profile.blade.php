@@ -21,7 +21,7 @@ $tags = ['tech', 'oil', 'textile','automobile','construction','cosmetics','miner
         <th class="user_profile_table_header">
             <img src = {{asset('images/profile_icon.jpg')}} alt="profile image" class="user_profile_icon">
         <br>
-        <input type="button" value="Sign Out" class="user_signout_button">
+        <input type="button" value="Sign Out" class="user_signout_button" onclick="sign_out()">
         </th>
         <th>
             <form action="user_profile" method="POST" class="user_profile_form">
