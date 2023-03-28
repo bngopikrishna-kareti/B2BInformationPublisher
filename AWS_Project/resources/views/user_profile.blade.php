@@ -14,7 +14,7 @@ $tags = ['tech', 'oil', 'textile','automobile','construction','cosmetics','miner
         <button>
             <img src={{asset('images/cart_logo.png')}} alt="cart_logo" class="cart_logo" onclick="wishlist_page({{$id}})">
         </button>
-        <img class = "company_logo" src={{asset('images/company_logo.jpeg')}} alt = 'company logo'>
+        <img class = "company_logo" src={{asset('images/admin_login_logo.jpg')}} alt = 'company logo'>
    </div>
    <div>
     <table>

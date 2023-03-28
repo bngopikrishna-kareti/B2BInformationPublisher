@@ -31,7 +31,7 @@
                 @endforeach
             @endif
         </div>
-        <img class = "company_logo" src={{asset('images/company_logo.jpeg')}} alt = 'company logo'>
+        <img class = "company_logo" src={{asset('images/admin_login_logo.jpg')}} alt = 'company logo'>
     </div>
 
     <div class="search_div">
