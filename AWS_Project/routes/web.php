@@ -22,9 +22,36 @@ use App\Http\Controllers\UserCartController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('userlogin');
 });
 
+Route::get('/homepage',function(){
+    return view('homepage');
+});
+
+Route::get('/adminpasswordreset',function(){
+    return view('adminpasswordreset');
+}
+);
+
+Route::get('/registerasuser',function(){
+    return view('registerasuser');
+});
+
+Route::get('/sector_page',function(){
+    return view('sector_page');
+});
+
+Route::get('/available_ideas',function(){
+    return view('available_ideas');
+});
+Route::get('/AddIdea',function(){
+    return view('AddIdea');
+});
+
+Route::get("/Remove_idea",function(){
+    return view('Remove_idea');
+});
 Route::get('/user/{id}', function(Request $request, $id){
     return view('user',[
         'ideas' => Idea::all(),
