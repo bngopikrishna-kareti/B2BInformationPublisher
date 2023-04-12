@@ -7,11 +7,41 @@
     <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script>
+       function homepage(){
+        window.location = '/homepage';
+      }
+      function admin_password_reset(){
+        window.location = '/adminpasswordreset';
+      }
+
+      function register_user(){
+        window.location='/registerasuser';
+      }
       function log_out(){
         window.location = '/';
       }
       function sector_page(){
         window.location = '/sector_page';
+      }
+      function AddIdea(){
+        window.location = '/AddIdea';
+      }
+      function Remove_Idea(){
+        window.location = '/Remove_Idea';
+      }
+      function clients_view(){
+        window.location ='/clients_view';
+      }
+      function Add_RMs(){
+        window.location ='/Add_RMs';
+      }
+      function Delete_RMs(){
+        window.location ='/Delete_RMs';
+      }
+
+      function available_ideas(){
+        console.log("inside_available_ideas");
+        window.location = '/available_ideas';
       }
     </script>
 </head>
@@ -28,23 +58,23 @@
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="AddIdea.html">Add Ideas</a></li>
+      <li class="dropdown-item" onclick="AddIdea()">Add Ideas</li>
       <li><a class="dropdown-item" href="#">Edit Existing Idea</a></li>
-      <li><a class="dropdown-item" href="Remove idea.html">Kill Idea</a></li>
+      <li class="dropdown-item" onclick="Remove_Idea()">Kill Idea</li>
       <li><hr class="dropdown-divider"></li>
     </ul>
   </div>
   <br>
-  <a href="clents view.html"><button type="button" class="btn btn-warning" id="liveToastBtn">Clients</button></a>
+  <button type="button" class="btn btn-warning" onclick="clients_view()" id="liveToastBtn">Clients</button>
   <div class="btn-group">
     <a href="RM Page.html"><button type="button" class="btn btn-warning" id="liveToastBtn">RM</button></a>
     <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="Add RMs.html">Add RM</a></li>
+      <li class="dropdown-item"  onclick="Add_RMs()">Add RM</li>
       <li><a class="dropdown-item" href="#">Edit RM Info</a></li>
-      <li><a class="dropdown-item" href="Delete RMs.html">Delete RM</a></li>
+      <li class="dropdown-item" onclick="Delete_RMs()">Delete RM</li>
       </ul>
   </div>
    

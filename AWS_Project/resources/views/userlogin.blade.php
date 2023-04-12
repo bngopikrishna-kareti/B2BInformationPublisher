@@ -17,6 +17,31 @@
       function register_user(){
         window.location='/registerasuser';
       }
+      function log_out(){
+        window.location = '/';
+      }
+      function sector_page(){
+        window.location = '/sector_page';
+      }
+      function AddIdea(){
+        window.location = '/AddIdea';
+      }
+      function Remove_Idea(){
+        window.location = '/Remove_Idea';
+      }
+      function clients_view(){
+        window.location ='/clients_view';
+      }
+      function Add_RMs(){
+        window.location ='/Add_RMs';
+      }
+      function Delete_RMs(){
+        window.location ='/Delete_RMs';
+      }
+      function available_ideas(){
+        console.log("inside_available_ideas");
+        window.location = '/available_ideas';
+      }
       </script>
 </head>
 <body>

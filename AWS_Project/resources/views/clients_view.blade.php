@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RMs List</title>
+    <title>Clients List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script>
        function homepage(){
@@ -38,11 +38,11 @@
       function Delete_RMs(){
         window.location ='/Delete_RMs';
       }
-
       function available_ideas(){
         console.log("inside_available_ideas");
         window.location = '/available_ideas';
       }
+
     </script>
     </head>
 <body>
@@ -52,26 +52,27 @@
 <p class="font-monospace">Welcome Back Admin!</p>
 <div class="btn-group">
     
-    <a href="homepage.html"><button type="button" class="btn btn-warning" id="liveToastBtn">Home</button></a></div>
-  <div class="btn-group">
-  <button type="button" class="btn btn-warning" id="liveToastBtn" onclick="sector_page()">Ideas</button>
-    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropdown</span>
-    </button>
+<button type="button" class="btn btn-warning" id="liveToastBtn" onclick="home_page()">Home</button></div>
+    <div class="btn-group">
+    <button type="button" class="btn btn-warning" id="liveToastBtn" onclick="sector_page()">Ideas</button>
+      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
     <ul class="dropdown-menu">
-    <li class="dropdown-item" onclick="AddIdea()">Add Ideas</li>
+      <li><a class="dropdown-item" href="available ideas.html">Veiw Ideas</a></li>
+      <li class="dropdown-item" onclick="AddIdea()">Add Ideas</li>
       <li><a class="dropdown-item" href="#">Edit Existing Idea</a></li>
       <li class="dropdown-item" onclick="Remove_Idea()">Kill Idea</li>
       <li><hr class="dropdown-divider"></li>
     </ul>
   </div>
   <button type="button" class="btn btn-warning" onclick="clients_view()" id="liveToastBtn">Clients</button>
-  
   <div class="btn-group">
-    <button type="button" class="btn btn-warning">RMs</button>
+    <a href="RM Page.html"><button type="button" class="btn btn-warning" id="liveToastBtn">RM</button></a>
     <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
+ 
     <ul class="dropdown-menu">
     <li class="dropdown-item"  onclick="Add_RMs()">Add RM</li>
       <li><a class="dropdown-item" href="#">Edit RM Info</a></li>
@@ -157,29 +158,53 @@
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Umesh</td>
-        <td>.</td>
-        <td>umesh@gmail.com</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>mdo@gmail.com</td>
         <td>7964317946</td>
-        <td>India</td>
+        <td>Russia</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Akhilesh</td>
-        <td>.</td>
-        <td>Akhilesh@hotmail.com</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>jt@hotmail.com</td>
         <td>758385241</td>
-        <td>India</td>
+        <td>Phillipines</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Gopi</td>
-        <td>.</td>
-        <td>gopi@twitter</td>
+        <td>Larry</td>
+        <td>Lade</td>
+        <td>ll@twitter</td>
         <td>785214854</td>
-        <td>India</td>
+        <td>Africa</td>
       </tr>
-     
+      <tr>
+        <th scope="row">4</th>
+        <td>Meg</td>
+        <td>Aade</td>
+        <td>Deml@outlook.com</td>
+        <td>785214854</td>
+        <td>Africa</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Lucy</td>
+        <td>Eve</td>
+        <td>le@gmail.com</td>
+        <td>785214854</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Mark</td>
+        <td>John</td>
+        <td>john@gmailcom</td>
+        <td>785214854</td>
+        <td>Australia</td>
+      </tr>
+      
     </tbody>
   </table>
 

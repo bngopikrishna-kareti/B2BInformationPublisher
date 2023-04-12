@@ -15,18 +15,45 @@
         window.location = '/available_ideas';
       }
 
-      function Add_rms(){
-        window.location = '/AddIdea';
-      }
-
       function Remove_idea(){
         window.location = '/Remove_idea';
       }
-      </script>
+      
+      function admin_password_reset(){
+        window.location = '/adminpasswordreset';
+      }
+
+      function register_user(){
+        window.location='/registerasuser';
+      }
+      function log_out(){
+        window.location = '/';
+      }
+      function sector_page(){
+        window.location = '/sector_page';
+      }
+      function AddIdea(){
+        window.location = '/AddIdea';
+      }
+      function Remove_Idea(){
+        window.location = '/Remove_Idea';
+      }
+      function clients_view(){
+        window.location ='/clients_view';
+      }
+      function Add_RMs(){
+        window.location ='/Add_RMs';
+      }
+      function Delete_RMs(){
+        window.location ='/Delete_RMs';
+      }
+
+
+    </script>
 </head>
 <body>
    <h1> <div class="shadow-sm p-3 mb-5 bg-body rounded">Idea Investments</div></h1>
-<img src="logo.jpg" class="rounded float-end" alt="...">
+   <img src={{asset('/images/admin_login_logo.jpg')}} class="rounded float-end" alt="...">
 <br>
 <p class="font-monospace">Welcome Back Admin!</p>
 <div class="btn-group">
@@ -43,16 +70,16 @@
       <li><hr class="dropdown-divider"></li>
     </ul>
   </div>
-  <a href="clents view.html"><button type="button" class="btn btn-warning" id="liveToastBtn">Clients</button></a>
+  <button type="button" class="btn btn-warning" onclick="clients_view()" id="liveToastBtn">Clients</button>
   <div class="btn-group">
     <a href="RM Page.html"><button type="button" class="btn btn-warning" id="liveToastBtn">RM</button></a>
     <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="Add RMs.html">Add RM</a></li>
+    <li class="dropdown-item"  onclick="Add_RMs()">Add RM</li>
       <li><a class="dropdown-item" href="#">Edit RM Info</a></li>
-      <li><a class="dropdown-item" href="Delete RMs.html">Delete RM</a></li>
+      <li class="dropdown-item" onclick="Delete_RMs()">Delete RM</li>
       </ul>
   </div>
    
@@ -118,7 +145,7 @@
     </div>
   </div>
   <a class="btn btn-warning" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Account</a>
-  <a href="userlogin.html"><button type="button" class="btn btn-danger" id="liveToastBtn">Logout</button></a>
+  <button type="button" class="btn btn-danger" id="liveToastBtn" onclick="log_out()">Logout</button>
   <br>
   
   <nav id="navbar-example" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
