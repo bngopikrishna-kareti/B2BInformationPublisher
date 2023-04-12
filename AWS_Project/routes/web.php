@@ -24,6 +24,17 @@ use App\Http\Controllers\UserCartController;
 Route::get('/', function () {
     return view('userlogin');
 });
+Route::get('/Add_RMs',function(){
+    return view('Add_RMs');
+});
+Route::get('/Delete_RMs',function(){
+    return view('Delete_RMs');
+});
+
+
+Route::get('/clients_view',function(){
+    return view('clients_view');
+});
 
 Route::get('/homepage',function(){
     return view('homepage');
